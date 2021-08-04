@@ -11,14 +11,18 @@ Anshul Kumar and Roger Edwards. 2021. AdaptiveLearnalytics: Adaptive Predictive 
 
 The following code can help you get started with installing and using the package:
 
-`if (!require(devtools)) install.packages('devtools')`
-`library(devtools)`
-`devtools::install_github("readcreate/AdaptiveLearnalytics")`
-`library(AdaptiveLearnalytics)`
+```
+if (!require(devtools)) install.packages('devtools')`
+library(devtools)
+devtools::install_github("readcreate/AdaptiveLearnalytics")
+library(AdaptiveLearnalytics)
+```
 
 Run the following code for more information:
 
 `help(package = 'AdaptiveLearnalytics')`
+
+The example code for each function uses the dataset `mtcars`, which is built into R, and should hopefully run for you smoothly. 
 
 This package was initially developed to assist with the following publication: Anshul Kumar, Lisa Walker, and Roger Edwards (2021), *The application of predictive analytics to identify at-risk students in health professions education.*
 
