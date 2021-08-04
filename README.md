@@ -9,6 +9,13 @@ We welcome your questions or feedback: Anshul Kumar <akumar@mghihp.edu>
 Suggested citation:
 Anshul Kumar and Roger Edwards. 2021. AdaptiveLearnalytics: Adaptive Predictive Learning Analytic Tools. https://github.com/readcreate/AdaptiveLearnalytics 
 
+The following code can help you get started with installing and using the package:
+
+`if (!require(devtools)) install.packages('devtools')`
+`library(devtools)`
+`devtools::install_github("readcreate/AdaptiveLearnalytics")`
+`library(AdaptiveLearnalytics)`
+
 Run the following code for more information:
 
 `help(package = 'AdaptiveLearnalytics')`
