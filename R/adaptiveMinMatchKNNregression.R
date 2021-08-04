@@ -16,6 +16,8 @@
 #' dtrain <- mtcars[trainingRowIndex, ] # model training data
 #' dtest <- mtcars[-trainingRowIndex, ] # model test data
 #' dtestWithMatches <- adaptiveMinMatchKNNregression(trainX = subset(dtrain, select = -mpg), trainY = dtrain[c("mpg")], newX = subset(dtest, select = -mpg), maxK = 5)
+#' if (!require(Metrics)) install.packages('Metrics')
+#' library(Metrics)
 #' Metrics::rmse(dtestWithMatches$MatchDVMeanMin, dtest$mpg)
 #' plot(dtestWithMatches$MatchDVMeanMin, dtest$mpg, main = "mpg predictions, adaptive minimum match KNN", xlab = "predicted", ylab = "actual")
 #'

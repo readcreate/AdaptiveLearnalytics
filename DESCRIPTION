@@ -8,7 +8,7 @@ Authors@R: c(
     person("Roger", "Edwards", role = "aut"))
 Maintainer: Anshul Kumar <akumar@mghihp.edu>
 Description: The AdaptiveLearnalytics package provides tools for pre-processing data, cross-validating predictive models, and running machine learning models that adapt to specific data characteristics. This package was first published in August 2021 as an exploratory effort to improve predictions made by the standard K-nearest neighbors procedure.
-License: GNU GPLv3
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
