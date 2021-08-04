@@ -19,7 +19,7 @@ crossValidate(df, codeString, numFolds, randomSort = TRUE)
 data.frame object
 }
 \description{
-Perform "manual" cross validation. This function automatically creates folds (groups) in your data to cross-validate predictive models. It executes provided code, repeatedly on each training/testing data split, using each fold as the testing data one time. Returns a data.frame with original data (in original order) and the following additional variables: predicted values of the dependent variable, new ID number (according to the reordered data), original order number, and fold number.
+Perform "manual" cross validation. This function automatically creates folds (groups) in your data to cross-validate predictive models. It executes provided code, repeatedly on each training/testing data split, using each fold as the testing data one time. Returns a data.frame with original data (in original order) and the predicted values of the dependent variable.
 }
 \examples{
 if (!require(randomForest)) install.packages('randomForest')
@@ -30,12 +30,12 @@ library(Metrics)
 Metrics::rmse(mtcars.cv5.rf$rf.pred.mpg, mtcars.cv5.rf$mpg)
 plot(mtcars.cv5.rf$rf.pred.mpg, mtcars.cv5.rf$mpg, main = "mpg predictions, 5-fold cross validation, random forest", xlab = "predicted", ylab = "actual")
 
-if (!require(FNN)) install.packages('FNN'
+if (!require(FNN)) install.packages('FNN')
 library(FNN)
 mtcars.loocv.knn4 <- crossValidate(df = mtcars, codeString = 'dtrain.x <- subset(traindata, select = -mpg); dtrain.y <- subset(traindata, select = mpg); dtest.x <- subset(testdata, select = -mpg); dtest.y <- subset(testdata, select = -mpg); pred1 <- FNN::knn.reg(dtrain.x, dtest.x, dtrain.y, k = 4); testdata$knn4.pred.mpg <- pred1$pred', numFolds = nrow(mtcars), randomSort = TRUE)
 if (!require(Metrics)) install.packages('Metrics')
 library(Metrics)
-Metrics::rmse(mtcars.loocv.knn4$knn4.pred.mpg, dtest.y$mpg)
-plot(mtcars.loocv.knn4$knn4.pred.mpg, dtest.y$mpg, main = "mpg predictions, LOOCV, KNN (k = 4)", xlab = "predicted", ylab = "actual")
+Metrics::rmse(mtcars.loocv.knn4$knn4.pred.mpg, mtcars$mpg)
+plot(mtcars.loocv.knn4$knn4.pred.mpg, mtcars$mpg, main = "mpg predictions, LOOCV, KNN (k = 4)", xlab = "predicted", ylab = "actual")
 
 }
