@@ -1,0 +1,14 @@
+citHeader("To cite AdaptiveLearnalytics in publications use:")
+
+citEntry(entry = "Misc",
+         title        = "AdaptiveLearnalytics: Adaptive Predictive Learning Analytic Tools",
+         author       = personList(as.person("Anshul Kumar"),
+                                   as.person("Roger Edwards")),
+         year         = "2021",
+         url          = "https://github.com/readcreate/AdaptiveLearnalytics",
+
+         textVersion  =
+           paste("Anshul Kumar and Roger Edwards (2021).",
+                 "AdaptiveLearnalytics: Adaptive Predictive Learning Analytic Tools.",
+                 "URL: https://github.com/readcreate/AdaptiveLearnalytics.")
+)
