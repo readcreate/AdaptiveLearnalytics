@@ -12,7 +12,7 @@ Anshul Kumar and Roger Edwards. 2021. AdaptiveLearnalytics: Adaptive Predictive 
 The following code can help you get started with installing and using the package:
 
 ```
-if (!require(devtools)) install.packages('devtools')`
+if (!require(devtools)) install.packages('devtools')
 library(devtools)
 devtools::install_github("readcreate/AdaptiveLearnalytics")
 library(AdaptiveLearnalytics)
